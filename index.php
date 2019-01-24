@@ -13,7 +13,7 @@
 				case 'change-password':
 					include_once __DIR__ . '/ChangePasswordShellDriver.php';
 					$oProvider = new ChangePasswordShellDriver();
-					$oProvider->SetAllowedEmails(\strtolower(\trim($this->Config()->Get('plugin', 'allowed_emails', ''))));
+					$oProvider->SetAllowedEmails(strtolower(trim($this->Config()->Get('plugin', 'allowed_emails', ''))));
 					break;
 			}
 		}
