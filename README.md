@@ -8,13 +8,13 @@ Installation
 
 Clone this repository into your plugins directory.
 
-```
+```sh
 git clone https://github.com/lrdn/rainloop-change-password-shell.git change-password-shell
 ```
 
 In order for the password change to function you're required to add sudo permissions for `/usr/bin/passwd` to your web server user, in this example `www-data`. Additionally you need to assign a user group like `mailusers` to all email accounts for which the password change by the web server is granted.
 
-```
+```sh
 touch /etc/sudoers.d/mailusers
 echo "Defaults:www-data targetpw, timestamp_timeout=0" >> /etc/sudoers.d/mailusers
 echo "www-data ALL=(%mailusers) /usr/bin/passwd" >> /etc/sudoers.d/mailusers
